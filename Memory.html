@@ -1,0 +1,71 @@
+<!--Main html screen-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Memory.css" >
+    </head>     
+    <body>
+        
+        <h1>SPIDER WEB DEV<br>MEMORY GAME<br>
+        </h1>
+        
+        
+        
+        <div id="slots">
+            <div id=0 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img0" class="images" src="clip0.jpg" style="display:none">
+            </div>
+            <div id=1 id="hg" class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img1" class="images" src="clip0.jpg" style="display:none">
+            </div>
+            <div id=2 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img2" class="images" src="clip1.jpg" style="display:none">
+            </div>
+            <div id=3 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img3" class="images" src="clip1.jpg" style="display:none">
+            </div><br>
+            <div id=4 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img4" class="images" src="clip2.jpg" style="display:none">
+            </div>
+            <div id=5 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img5" class="images" src="clip2.jpg" style="display:none">
+            </div>
+            <div id=6 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img6" class="images" src="clip3.jpg" style="display:none">
+            </div>
+            <div id=7 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img7" class="images" src="clip3.jpg" style="display:none">
+            </div><br>
+            <div id=8 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img8" class="images" src="clip4.jpg" style="display:none">
+            </div>
+            <div id=9 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img9" class="images" src="clip4.jpg" style="display:none">
+            </div>
+            <div id=10 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img10" class="images" src="clip5.jpg" style="display:none">
+            </div>
+            <div id=11 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img11" class="images" src="clip5.jpg" style="display:none">
+            </div><br>
+            <div id=12 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img12" class="images" src="clip6.jpg" style="display:none">
+            </div>
+            <div id=13 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img13" class="images" src="clip6.jpg" style="display:none">
+            </div>
+            <div id=14 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img14" class="images" src="clip7.jpg" style="display:none">
+            </div>
+            <div id=15 class="slots" style="display:inline-block"  onclick="slotClicked(this.id)">
+                <img id="img15" class="images" src="clip7.jpg" style="display:none">
+            </div>
+        </div>
+        
+        <div id="turns"></div>
+        <button type="button" id="reset" onclick="reset()">RESET</button><br><br>
+    </body>
+    
+    <script src="Memory.js"></script>
+</html>
