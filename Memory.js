@@ -7,10 +7,14 @@ var imageIds= ["img0","img1","img2","img3","img4","img5","img6","img7",
 
     exposed=[false,false,false,false,false,false,false,false,
              false,false,false,false,false,false,false,false],
+    fullyexposed=[true,true,true,true,true,true,true,true,
+                  true,true,true,true,true,true,true,true],
     turns=0,
     stateOfSlots=0; //If one card has been turned,or two ,or none
 
 var idxOfImg1,idxOfImg2,idxOfImgClicked;
+
+//function to shuffle the memory slots-----------------------------------------------
 
 function shuffle(array)
 {
@@ -23,6 +27,8 @@ function shuffle(array)
     }
 }
 
+//function that starts a new game----------------------------------------------------
+
 function newGame()
 {
     shuffle(imagesArray);
@@ -32,21 +38,42 @@ function newGame()
         }
 }
 
-function gameOver()
+//function to compare given arrays till a particular index-----------------------------
+function compareArrays(arr1,arr2,n)
 {
-    console.log(exposed);
-    if(exposed==[true,true,true,true,true,true,true,true,
-             true,true,true,true,true,true,true,true])
+    if (n!=0)
     {
-        document.getElementById("slots").style.display="none";
-        document.getElementById("turns").innerHTML="GAME OVER"+"<br>"+"Turns ="+turns;
-        document.getElementById("reset").value="New Game";
+        if (arr1[n]===arr2[n] && compareArrays(arr1,arr2,n-1))
+        {
+            return true;
+        }
+    }
+    else if(arr1[0]===arr2[0])
+    {
+        return true;
+    }
+    else
+    {
+        return false;
     }
 }
 
+//function that compares where an image has been clicked-------------------------------
 
 function slotClicked(idxOfImgClicked)
 {
+    //function that checks if the game is over--------------------------
+    
+    function gameOver()
+    {
+        if (compareArrays(exposed,fullyexposed,15))
+        {
+            console.log(exposed);
+            document.getElementById("slots").style.display="none";
+            document.getElementById("turns").innerHTML="GAME OVER"+"<br>"+"Turns ="+turns;
+            document.getElementById("reset").innerHTML="New Game";
+        }
+    }
     
     idxOfImgClicked=parseInt(idxOfImgClicked);
     
@@ -96,19 +123,11 @@ function slotClicked(idxOfImgClicked)
                 document.getElementById(imageIds[idxOfImg1]).style.display="inline-block";
             }
     document.getElementById("turns").innerHTML="Turns ="+turns;
-    console.log(document.getElementById("reset").value);
-    function gameOver()
-    {
-        for(var i=0;i<16;i++)
-            if (exposed[i]==true && i==15)
-            {
-                console.log(exposed);
-                document.getElementById("slots").style.display="none";        document.getElementById("turns").innerHTML="GAME OVER"+"<br>"+"Turns ="+turns;        document.getElementById("reset").innerHTML="New Game";
-            }
-    }
+    
     gameOver();
 }
 document.getElementById("turns").innerHTML="Turns ="+turns;
+
 newGame();
 
 /*----------------------------------------------------------------------*/
