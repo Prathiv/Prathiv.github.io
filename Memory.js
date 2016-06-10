@@ -2,8 +2,7 @@
 var imageIds= ["img0","img1","img2","img3","img4","img5","img6","img7",
                 "img8","img9","img10","img11","img12","img13","img14","img15"],
     
-    imagesArray=["clip0.jpg","clip0.jpg","clip1.jpg","clip1.jpg","clip2.jpg","clip2.jpg","clip3.jpg","clip3.jpg",
-                "clip4.jpg","clip4.jpg","clip5.jpg","clip5.jpg","clip6.jpg","clip6.jpg","clip7.jpg","clip7.jpg"]
+    imagesArray=["bulbasaur.jpg","bulbasaur.jpg","pikachu.jpg","pikachu.jpg","charmander.jpg","charmander.jpg","squirtle.jpg","squirtle.jpg","mewtwo.jpg","mewtwo.jpg","charizard.jpg","charizard.jpg","meowth.jpg","meowth.jpg","blastoise.jpg","blastoise.jpg"]
 
     exposed=[false,false,false,false,false,false,false,false,
              false,false,false,false,false,false,false,false],
